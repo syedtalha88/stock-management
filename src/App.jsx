@@ -10,8 +10,8 @@ function App() {
       <div className="app">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/manage-stocks" element={<ManageStocks />} />
+          <Route path="/stock-management" element={<Dashboard />} />
+          <Route path="/stock-management/manage-stocks" element={<ManageStocks />} />
         </Routes>
       </div>
     </BrowserRouter>
