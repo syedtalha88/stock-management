@@ -16,12 +16,12 @@ const Sidebar = () => {
         <FaBars onClick={toggleSidebar} />
       </div>
       <ul>
-          <NavLink to="/stock-management" exact="true" activeClassName="active"> 
+          <NavLink to="/stockManagement" exact="true" activeClassName="active"> 
         <li>
             <FaHome style={{fontSize:"22px",color:"fff", marginRight:"4px"}}/> {isOpen && "  Dashboard"}
         </li>
           </NavLink>
-          <NavLink to="/stock-management/manage-stocks" activeClassName="active">
+          <NavLink to="/stockManagement/ManageStocks" activeClassName="active">
         <li className="sidebar-item">
             <FaBox style={{fontSize:"18px",color:"fff", marginRight:"4px"}} />{isOpen && " Manage Stocks"}
         </li>

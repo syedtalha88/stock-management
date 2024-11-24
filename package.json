@@ -1,6 +1,6 @@
 {
-  "name": "stock-management",
-  "homepage": "https://syedtalha88.github.io/stock-management/",
+  "name": "stockManagement",
+  "homepage": "https://syedtalha88.github.io/stockManagement/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
