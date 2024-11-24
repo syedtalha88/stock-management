@@ -1,0 +1,302 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw; 
+  overflow: hidden; 
+  
+  background-color: #ecf0f1;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #2c3e50;
+  color: white;
+  width: 250px;
+  transition: width 0.3s;
+  height: 100vh;
+}
+
+.sidebar.closed {
+  width: 40px; 
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar-header h2 {
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  color: white !important;
+}
+
+.sidebar ul li:hover {
+  background-color: #34495e;
+}
+
+/* Dashboard */
+.dashboard {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.dashboard-heading{
+  color: #2c3e50;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+  font-size: 30px;
+  font-family: 'montserrat';
+}
+.sidebar{
+  font-family: 'montserrat';
+}
+.sidebar-item{
+  color: white;
+}
+.sidebar-header{
+  transition: .3s ease;
+  width: 20px;
+}
+.sidebar-header:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 35px;
+}
+/* Sections */
+.sections {
+  color: #2c3e50;
+  width: 280px;
+  height: 120px;
+  font-family: 'montserrat';
+  background-color: white;
+  border: .5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+.sections-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  /* align-items: center; */
+}
+.sections-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.dashboard p{
+  font-size: 21px;
+  font-weight: 600;
+  margin: 2px;
+}
+
+
+.section {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+  margin: 0;
+  color: #3498db;
+}
+
+.section p {
+  font-size: 18px;
+}
+.sections-icon{
+
+  font-size: 70px;
+  margin-top: 17px;
+}
+
+/* manage stocks */
+
+.manage-stocks {
+  width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color:#2c3e50 ;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stocks-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'montserrat';
+}
+
+.stocks-table th, .stocks-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.stocks-table th {
+  background-color: #2c3e50; 
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+.stocks-table td {
+  background-color: #fff;
+}
+
+.stocks-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.stocks-table th:first-child, .stocks-table td:first-child {
+  padding-left: 20px;
+}
+
+.stocks-table th:last-child, .stocks-table td:last-child {
+  padding-right: 20px;
+}
+
+/* Responsive design */
+
+@media only screen and (max-width: 768px) {
+  .stocks-table {
+    font-size: 14px;
+  }
+  .dashboard-heading{
+    font-size: 24px;
+  }
+  .stocks-table th, .stocks-table td {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .stocks-table {
+    font-size: 12px;
+  }
+  .stocks-table th, .stocks-table td {
+    padding: 2px;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    /* position: absolute; */
+    height: 100%;
+    z-index: 10; 
+    width: 0; 
+    overflow-x: hidden; 
+  }
+
+  .sidebar.open {
+    width: 200px; 
+  }
+
+  .dashboard {
+    padding: 20px;
+  }
+
+  .sections {
+    flex-direction: column; 
+    gap: 15px; 
+  }
+
+  .section {
+    min-width: 100%; 
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .sidebar ul li {
+    font-size: 14px; 
+    padding: 8px; 
+  }
+  .sections{
+    width: 150px;
+    height: 70px;
+  }
+  .sections-icon{
+    font-size: 34px;
+    align-self: flex-start;
+  }
+  .section {
+    padding: 15px; 
+  }
+  h2{
+    font-size: 14px;
+  }
+  button{
+    font-size: 11px;
+    width: 90px;
+  }
+
+  .section p {
+    font-size: 16px; 
+  }
+
+  .sidebar-header h2 {
+    font-size: 16px; 
+  }
+  .sidebar{
+    position: absolute;
+  }
+  .dashboard{
+    margin-left: 30px;
+  }
+  .modal-content{
+    margin-left: 30px;
+  }
+  .stocks-table {
+    overflow-x: auto;
+    display: block;
+  }
+  .manage-stocks{
+    
+    margin-left: 30px;
+  }
+  .stocks-table::-webkit-scrollbar {
+    height: 10px;
+    background-color: #f9f9f9;
+  }
+  .stocks-table::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+}
+
