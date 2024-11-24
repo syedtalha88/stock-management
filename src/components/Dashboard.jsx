@@ -22,7 +22,7 @@ const Dashboard = () => {
           <div className="sections-wrapper">
             <div className="sections-data">
               <p>Manage :</p>
-              <NavLink to="/manage-stocks" activeClassName="active">
+              <NavLink to="/stock-management/manage-stocks" activeClassName="active">
                 <button>Show Stock</button>
               </NavLink>
             </div>
